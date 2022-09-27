@@ -10,7 +10,7 @@ public class Main {
         int total = 0;
         double average;
         int[] array = new int[30];
-        int min = array[0];
+        int min = array[0] + 200001;
         int max = array[0];
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println(Arrays.toString(array)); //проверка
@@ -21,25 +21,30 @@ public class Main {
             if (array[ii] > max) { //Задание 2 нахождение максимального числа
                 max = array[ii];
             }
-            if (array[ii] < min) { //Задание 2 нахождение минимального числа, не считает ?
+            if (array[ii] < min) { //Задание 2 нахождение минимального числа
                 min = array[ii];
             }
         }
         System.out.println();
-        System.out.println(max);
-        System.out.println(min);
+        System.out.println("Max: " + max);
+        System.out.print("Min: " + min);
+        System.out.println();
+
 
         average = (double) total / array.length; //Задание 3
         System.out.println("Сумма трат за месяц составила " + average + " рублей");
 
-        System.out.println(Arrays.toString(reverseFullName));
-        for (int j = 0; j < reverseFullName.length / 2; j++) {  //Задание 4
-            int t = reverseFullName[j];
-            reverseFullName[j] = reverseFullName[reverseFullName.length - j - 1];
-            reverseFullName[reverseFullName.length - j - 1] = (char) t;
-
+        System.out.println(Arrays.toString(reverseFullName)); // Задание 4
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+            Arrays.toString(reverseFullName);
         }
-        System.out.println(Arrays.toString(reverseFullName));
+//        for (int j = 0; j < reverseFullName.length / 2; j++) {  //Задание 4
+//            int t = reverseFullName[j];
+//            reverseFullName[j] = reverseFullName[reverseFullName.length - j - 1];
+//            reverseFullName[reverseFullName.length - j - 1] = (char) t;
+//
+//        }
 
     }
 
