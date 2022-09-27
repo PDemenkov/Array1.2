@@ -12,7 +12,7 @@ public class Main {
         int[] array = new int[30];
         int min = array[0];
         int max = array[0];
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println(Arrays.toString(array)); //проверка
         for (int ii = 0; ii < array.length; ii++) {
             array[ii] = (int) (Math.random() * range) + a;  //заполнение массива
@@ -33,12 +33,13 @@ public class Main {
         System.out.println("Сумма трат за месяц составила " + average + " рублей");
 
         System.out.println(Arrays.toString(reverseFullName));
-        for (int j=0;j<reverseFullName.length / 2; j++){  //Задание 4
+        for (int j = 0; j < reverseFullName.length / 2; j++) {  //Задание 4
             int t = reverseFullName[j];
             reverseFullName[j] = reverseFullName[reverseFullName.length - j - 1];
-            reverseFullName[reverseFullName.length-j-1] = (char) t;
+            reverseFullName[reverseFullName.length - j - 1] = (char) t;
 
-        }System.out.println(Arrays.toString(reverseFullName));
+        }
+        System.out.println(Arrays.toString(reverseFullName));
 
     }
 
